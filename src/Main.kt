@@ -1,16 +1,16 @@
 fun main() {
-    val baseSalary = 5000
-    val bonusAmount = 1000
-    var totalSalary = "$baseSalary + $bonusAmount"
-    totalSalary = calculate(baseSalary, bonusAmount)
+    val firstNumber = 10
+    val secondNumber = 5
+    val thirdNumber = 8
 
-    println("Congratulations for your bonus! You will receive a total of $totalSalary (additional bonus).")
+    val result = add(firstNumber, secondNumber)
+    val anotherResult = add(firstNumber, thirdNumber)
+
+    println("$firstNumber + $secondNumber = $result")
+    println("$firstNumber + $thirdNumber = $anotherResult")
 }
 
-//our total salary works not correctly, cuz its String, so Kotlin does not calculate sum.
-//correct way below.
-
-fun calculate(baseSalary: Int, bonusAmount: Int): String {
-    val totalSalary: Int = baseSalary + bonusAmount
-    return totalSalary.toString()
+// Define add() function below this line
+fun add(firstNumber: Int, secondNumber: Int): Int {
+    return firstNumber + secondNumber
 }
