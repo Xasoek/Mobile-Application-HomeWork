@@ -1,11 +1,15 @@
 fun main() {
-    val steps = 4000
-    val caloriesBurned = pedometerStepsToCalories(steps)
-    println("Walking $steps steps burns $caloriesBurned calories")
-}
+    var timeSpentToday = 300
 
-fun pedometerStepsToCalories(numberOfSteps: Int): Double {
-    val caloriesBurnedForEachStep = 0.04
-    val totalCaloriesBurned = numberOfSteps * caloriesBurnedForEachStep
-    return totalCaloriesBurned
+    var timeSpentYesterday = 250
+
+    println(compare(timeSpentToday, timeSpentYesterday))
+
+    timeSpentToday = 200
+
+
+    println(compare(timeSpentToday, timeSpentYesterday))
+}
+fun compare(timeSpentToday: Int, timeSpentYesterday: Int): Boolean {
+    return timeSpentToday > timeSpentYesterday
 }
